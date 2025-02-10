@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Placadia Deeper Haircare Oil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .product-image {
+            margin-bottom: 20px;
+        }
+        .product-image img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            var name = document.querySelector('input[name="name"]').value;
+            var address = document.querySelector('input[name="address"]').value;
+            var phone = document.querySelector('input[name="phone"]').value;
+            window.open(`mailto:omarsalamah81@gmail.com?subject=New Form Submission&body=Name: ${name}, Address: ${address}, Phone: ${phone}`);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Placadia Deeper Haircare Oil</h1>
+        </div>
+        <div class="product-image">
+            <img src="/mnt/data/WhatsApp%20Image%202025-01-30%20at%2017.11.55_ed109d2d-enhanced.png" alt="Placadia Deeper Haircare Oil">
+        </div>
+        <div class="form-container">
+            <form onsubmit="sendEmail(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="address" placeholder="Your Address" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
